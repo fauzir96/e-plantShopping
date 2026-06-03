@@ -11,10 +11,8 @@ function ProductList({ onHomeClick }) {
 
     const dispatch = useDispatch();
     
-    // Task 4: Access the Redux store to retrieve cart items 
     const cartItems = useSelector((state) => state.cart.items);
     
-    // HINT SOLUSI: Menggunakan fungsi eksplisit sesuai instruksi lab
     const calculateTotalQuantity = () => { 
         return cartItems ? cartItems.reduce((total, item) => total + item.quantity, 0) : 0; 
     };
